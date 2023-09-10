@@ -1,9 +1,9 @@
 {
     "slack_name": "Nugasquare",
     "current_day": "Sunday",
-    "utc_time": "2023-09-10T14:17:44Z",
+    "utc_time": "2023-09-10T14:51:04Z",
     "track": "backend",
-    "github_file_url": "https:\/\/github.com\/CodeLord36\/hng_backend_stage1_endpoint.git",
+    "github_file_url": "https:\/\/github.com\/CodeLord36\/hng_backend_stage1_endpoint\/blob\/main\/endpoint.php",
     "github_repo_url": "https:\/\/github.com\/CodeLord36\/hng_backend_stage1_endpoint",
     "status_code": 200
 }

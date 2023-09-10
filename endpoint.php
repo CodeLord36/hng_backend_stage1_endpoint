@@ -23,7 +23,8 @@ if (isset($_GET['slack_name']) && isset($_GET['track'])) {
     $currentUtcTime = gmdate('Y-m-d\TH:i:s\Z');
     
     // Define your GitHub repository information
-    $githubFileUrl = 'https://github.com/CodeLord36/hng_backend_stage1_endpoint.git';
+    $githubFileUrl = 'https://github.com/CodeLord36/hng_backend_stage1_endpoint/blob/main/endpoint.php';
+    
     $githubRepoUrl = 'https://github.com/CodeLord36/hng_backend_stage1_endpoint';
     
     // Validate UTC time
@@ -40,18 +41,24 @@ if (isset($_GET['slack_name']) && isset($_GET['track'])) {
         'status_code' => 200,
     ];
 
-    // Convert to JSON and save to a file
-    $jsonResponse = json_encode($response, JSON_PRETTY_PRINT);
-    file_put_contents('static.json', $jsonResponse);
-
     
-    // Send the response as JSON
-    echo json_encode($response);
 } else {
     // If parameters are missing, return an error response
     http_response_code(400); // Bad Request
     echo json_encode(['error' => 'Missing slack_name and/or track parameters']);
 }
+
+// Create HTML content
+$htmlContent = <<<HTML
+    Static HTML Page
+    Slack name: $slackName
+    Current day: $currentDay
+    UTC time: $currentUtcTime
+    Track: $track
+    Status Code: 200
+HTML;
+
+echo $htmlContent;
 
 
 ?>
