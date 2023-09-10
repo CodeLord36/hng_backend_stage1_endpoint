@@ -39,6 +39,11 @@ if (isset($_GET['slack_name']) && isset($_GET['track'])) {
         'github_repo_url' => $githubRepoUrl,
         'status_code' => 200,
     ];
+
+    // Convert to JSON and save to a file
+    $jsonResponse = json_encode($response, JSON_PRETTY_PRINT);
+    file_put_contents('static.json', $jsonResponse);
+
     
     // Send the response as JSON
     echo json_encode($response);
@@ -47,3 +52,6 @@ if (isset($_GET['slack_name']) && isset($_GET['track'])) {
     http_response_code(400); // Bad Request
     echo json_encode(['error' => 'Missing slack_name and/or track parameters']);
 }
+
+
+?>
