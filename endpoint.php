@@ -23,8 +23,8 @@ if (isset($_GET['slack_name']) && isset($_GET['track'])) {
     $currentUtcTime = gmdate('Y-m-d\TH:i:s\Z');
     
     // Define your GitHub repository information
-    $githubFileUrl = 'https://github.com/username/repo/blob/main/file_name.ext';
-    $githubRepoUrl = 'https://github.com/username/repo';
+    $githubFileUrl = 'https://github.com/CodeLord36/hng_backend_stage1_endpoint.git';
+    $githubRepoUrl = 'https://github.com/CodeLord36/hng_backend_stage1_endpoint';
     
     // Validate UTC time
     $isValidUtcTime = validateUtcTime($currentUtcTime);
